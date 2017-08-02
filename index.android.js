@@ -12,48 +12,11 @@ import {
   View
 } from 'react-native';
 
-export class Feed extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      bookmarks: []
-    }
-  }
-  componentDidMount() {
-    fetch("http://feed.hbfav.com/laiso/bookmark")
-      .then((response) => response.json())
-      .then((responseJson) => {
-        return responseJson.bookmarks;
-      })
-      .then((bookmarks) => {
-        console.warn(bookmarks)
-        this.setState({bookmarks})
-      })
-      .catch((error) => {
-        console.error(error);
-      })
-  }
-  render() {
-    if (this.state.bookmarks.length === 0) {
-      return (
-        <Text>Loading...</Text>
-      )    
-    }
-
-    const items = this.state.bookmarks.map( item =>
-      { return <Text>{item.title}</Text> }
-    )
-    return (
-      <View>{items}</View>
-    )
-  }
-}
-
 export default class RBFav extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Feed />
+         <Feed />
       </View>
     );
   }

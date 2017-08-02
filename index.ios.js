@@ -11,21 +11,17 @@ import {
   Text,
   View
 } from 'react-native';
+import { Feed } from './Feed';
 
 export default class RBFav extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+      
+      <View>
+       <Text>デザインプロセスにあるイケア効果 : could</Text>
+      </View>
+      
       </View>
     );
   }
